@@ -1,7 +1,10 @@
-extends includes/layout
+extends layout/layout
 
 block content
   include includes/recent-posts
+
+  
+
   #index-pages
     each index_page in theme.index_pages
       each pg in site.pages.toArray()

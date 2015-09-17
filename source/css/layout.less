@@ -1,0 +1,32 @@
+// import variable less
+@import (reference) "./includes/variable.less";
+
+// import base less
+@import (reference) "./includes/base.less";
+
+// import vendors css
+@import (inline) "./vendors/normalize.css";
+
+body {
+    font-family: arial, sans-serif;
+}
+
+// layout
+.base-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    border-bottom: 1px solid @menu-border-color;
+    box-shadow: 0 0 3px @menu-border-color;
+    @import (less) "./includes/menu.less";
+}
+
+.base-content {
+    margin-top: 48px;
+}
+
+.base-footer {
+    @import (less) "./includes/footer.less";
+}

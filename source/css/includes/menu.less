@@ -1,0 +1,44 @@
+// import variable less
+@import (reference) "./variable.less";
+
+// import base less
+@import (reference) "./base.less";
+
+.menu-wrapper {
+    position: relative;
+    height: 48px;
+    .menu-layout-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .filter-blur;
+    }
+    .menu-content {
+        height: 48px;
+        background-color: rgba(250, 250, 250, .95);
+    }
+    .menu-list {
+        .clearfix;
+        margin: 0;
+        .menu-item {
+            list-style: none;
+            float: left;
+            padding: 0 24px;
+            margin: 12px 0;
+            border-right: 1px solid @menu-border-color;
+        }
+        .menu-link {
+            display: inline-block;
+            height: 24px;
+            line-height: 24px;
+            text-decoration: none;
+            color: @menu-link-color;
+            font-size: 24px;
+            &:hover {
+                color: @menu-link-color-hover;
+            }
+        }
+    }
+}

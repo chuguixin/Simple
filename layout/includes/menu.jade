@@ -1,0 +1,10 @@
+.menu-wrapper
+  .menu-layout-bg
+  nav.menu-content
+    ul.menu-list
+      each url, label in theme.menu
+        li.menu-item
+          if url == '/'
+            a.menu-link(href=url)= config.title
+          else
+            a.menu-link(href=url)= label

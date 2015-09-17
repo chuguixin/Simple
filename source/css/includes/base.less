@@ -1,0 +1,16 @@
+.clearfix() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+.filter-blur(@size: 5px) {
+    -moz-filter: blur(@size);
+    -webkit-filter: blur(@size);
+    -o-filter: blur(@size);
+    -ms-filter: blur(@size);
+    filter: blur(@size);
+}
