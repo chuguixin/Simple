@@ -9,9 +9,10 @@
 
 body {
     font-family: arial, sans-serif;
-    background-color: #F8F8F8;
-    color: #333;
+    background-color: @base-background-color;
     line-height: 1.5em;
+    font-size: @base-font-size;
+    color: @base-color;
 }
 
 // layout
@@ -30,7 +31,7 @@ body {
 .base-content {
     padding-top: 48px;
     .base-content-main {
-        width: 1080px;
+        width: 51em;
         margin: 0 auto;
     }
 }
@@ -43,3 +44,4 @@ body {
 }
 
 @import (less) "./includes/pagination.less";
+@import (less) "./includes/post-list.less";

@@ -13,12 +13,14 @@ index_pages:
 - about
 - contact
 
+excerpt: true
+
 # feed
 atom: /atom.xml
 
 # Miscelaneous
-favicon: /favicon.png
+favicon: /img/favicon.png
 
 # loaded in the head
 stylesheets:
-- /css/style.css
+#- /css/style.css

@@ -1,0 +1,16 @@
+mixin postList(page)
+  .post-list-wrapper
+    each post in page.posts.toArray()
+      article.article-item
+        h2.article-title-wrapper
+          if post.link
+            a.title-link(href=post.link, target='_blank')
+              !=post.title
+          else
+            - var rulRegex = /(\/index\.html?$)|(\/?$)/;
+            - var path = post.path.replace(rulRegex, '');
+            a.title-link(href=url_for(path), target='_blank')
+              !=post.title
+        if(theme.excerpt)
+          .article-excerpt
+            !=post.excerpt

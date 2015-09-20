@@ -1,16 +1,14 @@
 mixin meta(article)
   .meta
     h2.article-title
-      include title
       if article.link
         a(href=article.link, target='_blank')
-          +title(article)
+          !=article.title
       else
-        - var regex = /(\/index\.html?$)|(\/?$)/;
-        - var path = article.path.replace(regex, '');
-        //-fix for permalink in pages
+        - var rulRegex = /(\/index\.html?$)|(\/?$)/;
+        - var path = article.path.replace(rulRegex, '');
         a(href=url_for(path))
-          +title(article)
+          !=article.title
     .article-date
       a.extra-switch(href='javascript:void(0);')
         include post-meta

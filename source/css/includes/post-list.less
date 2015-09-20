@@ -1,0 +1,23 @@
+// import variable less
+@import (reference) "../base/variable.less";
+
+// import base less
+@import (reference) "../base/base.less";
+
+.post-list-wrapper {
+    padding: 20px 0;
+    .article-item {
+        padding: 0 0 30px;
+        .article-title-wrapper {
+            font-size: 2.4em;
+            color: @post-title-color;
+        }
+        .title-link {
+            color: @post-title-color;
+            text-decoration: none;
+            &:hover {
+                color: @menu-link-color-hover;
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@ html(lang=config.language)
     !=css('/css/layout.css')
     -if (theme.stylesheets && theme.stylesheets.length > 0)
       !=css(theme.stylesheets)
-    link(rel="icon", href='/favicon.png')
+    !=favicon_tag(theme.favicon || '/img/favicon.png')
   body
     header.base-menu
       include ../includes/menu.jade

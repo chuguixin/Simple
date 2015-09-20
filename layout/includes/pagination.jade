@@ -6,6 +6,6 @@
     space: '...'
   };
   
-
-nav.pagination-wrapper
-  !=paginator(paginatorOpt)
+if page.prev || page.next
+  nav.pagination-wrapper
+    !=paginator(paginatorOpt)
