@@ -1,2 +1,11 @@
-nav.pagination
-  !=paginator({prev_text: '&laquo;', next_text: '&raquo;', mid_size: 3})
+-
+  var paginatorOpt = {
+    prev_text: '&lt;&lt;',
+    next_text: '&gt;&gt;',
+    mid_size: 1,
+    space: '...'
+  };
+  
+
+nav.pagination-wrapper
+  !=paginator(paginatorOpt)

@@ -1,0 +1,9 @@
+mixin list(page)
+  include meta
+  each post in page.posts.toArray()
+    li
+      .meta
+        +meta(post)
+      if(theme.excerpt)
+        .excerpt
+          !=post.excerpt

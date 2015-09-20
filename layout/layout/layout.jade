@@ -10,19 +10,17 @@ doctype html
 html(lang=config.language)
   head
     meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     title= pageTitle
-    link(rel="stylesheet", href='/css/layout.css')
-    each url in theme.stylesheets
-      link(rel='stylesheet', href=url)
+    !=css('/css/layout.css')
+    -if (theme.stylesheets && theme.stylesheets.length > 0)
+      !=css(theme.stylesheets)
     link(rel="icon", href='/favicon.png')
   body
     header.base-menu
       include ../includes/menu.jade
     .base-content
-      #content-inner
-        if body
-          div!= body
-        else
-          block content
+      .base-content-main
+        block page-content
     footer.base-footer
       include ../includes/footer.jade
