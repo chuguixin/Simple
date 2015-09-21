@@ -11,6 +11,19 @@ mixin postList(page)
             - var path = post.path.replace(rulRegex, '');
             a.title-link(href=url_for(path), target='_blank')
               !=post.title
+        .article-meta
+          p.meta-item.meta-time
+            span.meta-item-title 发表于: 
+            !=date(post.date, config.date_format)
+          p.meta-item.meta-category
+            - post.categoriesArray = post.categories.toArray()
+            if Array.isArray(post.categoriesArray) && post.categoriesArray.length > 0
+              span.meta-item-title 分类于: 
+              each category, index in post.categoriesArray
+                a.category-link(href=url_for(category.path), target="_blank")
+                  !=category.name
+                if post.categoriesArray.length > 1 && index < post.categoriesArray.length - 1
+                  span.category-line  , 
         if(theme.excerpt)
           .article-excerpt
             !=post.excerpt
