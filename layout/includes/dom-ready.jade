@@ -1,0 +1,13 @@
+!=js(['http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'])
+
+- var baiduTongjiId = config.baidu_tongji_id || theme.baidu_tongji_id;
+
+if baiduTongjiId && baiduTongjiId.length > 0
+  script.
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?#{baiduTongjiId}";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();

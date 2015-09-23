@@ -3,7 +3,7 @@ extends layout/layout
 block page-content
   - var categoriesList = list_categories({ show_count: false })
   - var tagsList = list_tags({ show_count: false })
-  - var archivesList = list_archives({ show_count: false })
+  - var archivesList = list_archives({ show_count: false, type: 'yearly' })
 
   div.archive
     if !is_year()

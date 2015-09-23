@@ -21,6 +21,5 @@ atom: /atom.xml
 # Miscelaneous
 favicon: /img/favicon.png
 
-# loaded in the head
-stylesheets:
-#- /css/style.css
+# 百度统计
+baidu_tongji_id: 34f1b5ac0025caf0dec6d5dadadeff67
