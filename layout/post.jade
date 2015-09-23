@@ -1,6 +1,10 @@
 extends layout/layout
 
 block page-content
-  article#post
-    h1= page.title
-    != page.content
+  article.article-main
+    h1.article-title= page.title
+    .article-meta
+      include includes/post-meta
+      +postMeta(page)
+    .article-content
+      != page.content

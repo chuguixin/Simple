@@ -1,8 +1,8 @@
 // import variable less
-@import (reference) "./base/variable.less";
+@import "./base/variable.less";
 
 // import base less
-@import (reference) "./base/base.less";
+@import "./base/base.less";
 
 // import vendors css
 @import (inline) "./vendors/normalize.css";
@@ -14,9 +14,13 @@ body {
     font-size: @base-font-size;
     color: @base-color;
     a {
+        color: @base-link-color;
         transition: 
             color .36s ease,
             background-color .36s ease;
+        &:hover {
+            color: @base-link-hover-color;
+        }
     }
 }
 
@@ -48,7 +52,3 @@ body {
     // import footer css
     @import (less) "./includes/footer.less";
 }
-
-@import (less) "./includes/pagination.less";
-@import (less) "./includes/post-list.less";
-@import (less) "./includes/highlight.less";

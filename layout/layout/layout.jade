@@ -12,8 +12,8 @@ html(lang=config.language)
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     title= pageTitle
-    !=css('/css/layout.css')
-    -if (theme.stylesheets && theme.stylesheets.length > 0)
+    !=css(['/css/layout.css', '/css/main.css'])
+    - if (theme.stylesheets && theme.stylesheets.length > 0)
       !=css(theme.stylesheets)
     !=favicon_tag(theme.favicon || '/img/favicon.png')
   body

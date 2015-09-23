@@ -1,0 +1,45 @@
+// import variable less
+@import (reference) "./base/variable.less";
+// import base less
+@import (reference) "./base/base.less";
+.article-main {
+    padding: 10px 0;
+    .article-title {
+        font-size: 2.2em;
+        line-height: 1.1em;
+        text-align: center;
+        color: @post-title-color;
+        margin: 1em 0 0 0;
+    }
+    .article-meta {
+        .clearfix;
+        padding-bottom: 5px;
+        text-align: center;
+        .meta-item {
+            padding: 0;
+            font-size: 14px;
+            line-height: 16px;
+            height: 16px;
+            color: @post-meta-color;
+            display: inline-block;
+        }
+        .meta-time {
+            border-right: 1px solid @post-meta-color;
+            padding-right: 12px;
+        }
+        .meta-category {
+            padding-left: 12px;
+        }
+        .category-link {
+            color: @post-meta-color;
+            &:hover {
+                color: @menu-link-color;
+            }
+        }
+    }
+    .article-content {
+        p {
+            text-indent: 1.5em;
+        }
+    }
+}

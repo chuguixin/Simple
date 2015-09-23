@@ -1,6 +1,5 @@
 // import variable less
 @import (reference) "../base/variable.less";
-
 // import base less
 @import (reference) "../base/base.less";
 
@@ -8,6 +7,13 @@ code {
     border: 1px solid @code-block-color-border;
     padding: 3px;
     margin: 3px;
+}
+
+blockquote {
+    border-left: 5px solid @code-block-color-border;
+    margin: 0;
+    padding: .1em 0 .1em 2em;
+    font-style: italic;
 }
 
 .entry .gist {
