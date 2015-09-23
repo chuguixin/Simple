@@ -13,6 +13,11 @@ body {
     line-height: 1.5em;
     font-size: @base-font-size;
     color: @base-color;
+    a {
+        transition: 
+            color .36s ease,
+            background-color .36s ease;
+    }
 }
 
 // layout
@@ -24,6 +29,7 @@ body {
     height: 48px;
     border-bottom: 1px solid @menu-border-color;
     box-shadow: 0 0 3px @menu-border-color;
+    z-index: 1;
     // import menu css
     @import (less) "./includes/menu.less";
 }
@@ -45,3 +51,4 @@ body {
 
 @import (less) "./includes/pagination.less";
 @import (less) "./includes/post-list.less";
+@import (less) "./includes/highlight.less";

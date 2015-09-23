@@ -7,7 +7,7 @@
 .post-list-wrapper {
     padding: 20px 0;
     .article-item {
-        padding: 0 0 30px;
+        padding: 0 0 60px;
         .article-title-wrapper {
             font-size: 2.5em;
             line-height: 1em;
@@ -43,6 +43,23 @@
                 color: @post-meta-color;
                 &:hover {
                     color: @menu-link-color;
+                }
+            }
+        }
+        .article-excerpt {
+
+        }
+        .article-read-more {
+            .read-more-link {
+                display: inline-block;
+                font-size: @base-font-size;
+                background-color: @post-more-link-bg;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: @base-color;
+                &:hover {
+                    color: #FFF;
+                    background-color: @menu-link-color;
                 }
             }
         }

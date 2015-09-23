@@ -1,11 +1,21 @@
-// menu 变量
-@menu-link-color:        rgba(62, 187, 150, 1);
-@menu-link-color-hover:  darken(@menu-link-color, 15%);
-@menu-border-color:        rgba(214, 214, 214, .9);
-
+// base variables
 @base-background-color: rgba(250, 250, 250, 1);
 @base-font-size: 16px;
 @base-color: rgba(80, 80, 80, 1);
 
+// menu variables
+@menu-link-color: rgba(62, 187, 150, 1);
+@menu-link-color-hover: darken(@menu-link-color, 15%);
+@menu-border-color: rgba(214, 214, 214, .9);
+@menu-backgroun-color: rgba(250, 250, 250, .95);
+
+// post variables
 @post-title-color: darken(@base-color, 0%);
 @post-meta-color: lighten(@base-color, 20%);
+@post-more-link-bg: darken(@base-background-color, 7%);
+
+// code block highlight
+@code-block-color-background: darken(@base-background-color, 1%);
+@code-block-color-meta: lighten(@base-color, 10%);
+@code-block-color-border: darken(@code-block-color-background, 8%);
+@code-block-color-inner-border: lighten(@code-block-color-border, 4%);

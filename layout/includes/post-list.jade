@@ -24,6 +24,11 @@ mixin postList(page)
                   !=category.name
                 if post.categoriesArray.length > 1 && index < post.categoriesArray.length - 1
                   span.category-line  , 
-        if(theme.excerpt)
+        if theme.excerpt
           .article-excerpt
             !=post.excerpt
+          .article-read-more
+            a.read-more-link(href=url_for(post.path)) Read more
+        else
+          .article-excerpt
+            !=post.content
