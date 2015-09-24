@@ -22,4 +22,7 @@ atom: /atom.xml
 favicon: /img/favicon.png
 
 # 百度统计
-baidu_tongji_id: 34f1b5ac0025caf0dec6d5dadadeff67
+baidu_tongji_id: 
+
+# uyan 评论系统
+uyan_id: 
