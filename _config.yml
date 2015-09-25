@@ -5,7 +5,7 @@ language: zh-cmn-Hans
 # main menu navigation
 menu:
   Home: /
-  Archives: /archives
+  Archives: /blog/archives
 
 # can include these pages on the front
 index_pages:
