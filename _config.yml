@@ -6,12 +6,7 @@ language: zh-cmn-Hans
 menu:
   Home: /
   Archives: /blog/archives
-
-# can include these pages on the front
-index_pages:
-- index
-- about
-- contact
+  About: /blog/about
 
 excerpt: true
 

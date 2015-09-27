@@ -1,34 +1,61 @@
 extends layout/layout
 
 block page-content
-  - var categoriesList = list_categories({ show_count: false })
-  - var tagsList = list_tags({ show_count: false })
   - var archivesList = list_archives({ show_count: false, type: 'yearly' })
 
-  div.archive
+  div.archive-main
     if !is_year()
 
-      h1 Archives
-      !=config.baidu_tongji_id
-      aside
-        h2 Archives
-        if archivesList
-          != archivesList
-        else
-          p None.
-      br
-
+      h1.page-title Archives
+        .time-line-bg
+          span.time-line-disc
+      .main-content        
+        each post in page.posts.toArray()
+          - var currentYear;
+          - post.year = date(post.date, 'YYYY');
+          if post.year !== currentYear
+            - currentYear = post.year;
+            h2.time-title
+              != currentYear
+              .time-line-bg
+                span.time-line-disc
+          h3.article-achive-title
+            .time-line-bg
+              span.time-line-disc
+            if post.link
+              a.title-link(href=post.link, target='_blank')
+                span.title-date=date(post.date, 'MM-DD')
+                !=post.title
+            else
+              - var rulRegex = /(\/index\.html?$)|(\/?$)/;
+              - var path = post.path.replace(rulRegex, '');
+              a.title-link(href=url_for(path), target='_blank')
+                span.title-date=date(post.date, 'MM-DD')
+                !=post.title
     else
-
-      h1= page.month + '/' + page.year
-
-      - page.posts.each(function(article){
-        .archive-list-item
-          if article.link
-            a(href=url_for(article.link) target="_blank")= article.title || 'No Title'
-          else
-            a(href=url_for(article.path))= article.title || 'No Title'
-          time(datetime=date_xml(article.date))= date(article.date)
-      - })
+      h1.page-title 
+      .main-content        
+        each post in page.posts.toArray()
+          - var currentYear;
+          - post.year = date(post.date, 'YYYY');
+          if post.year !== currentYear
+            - currentYear = post.year;
+            h2.time-title
+              != currentYear
+              .time-line-bg
+                span.time-line-disc
+          h3.article-achive-title
+            .time-line-bg
+              span.time-line-disc
+            if post.link
+              a.title-link(href=post.link, target='_blank')
+                span.title-date=date(post.date, 'MM-DD')
+                !=post.title
+            else
+              - var rulRegex = /(\/index\.html?$)|(\/?$)/;
+              - var path = post.path.replace(rulRegex, '');
+              a.title-link(href=url_for(path), target='_blank')
+                span.title-date=date(post.date, 'MM-DD')
+                !=post.title
 
     include includes/pagination

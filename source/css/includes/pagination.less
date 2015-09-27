@@ -4,15 +4,27 @@
 @import (reference) "../base/base.less";
 
 .pagination-wrapper {
-    padding: 60px 0 0 0;
     text-align: center;
     font-size: 16px;
-    .page-number {
+    .page-number, .extend {
         display: inline-block;
         line-height: 24px;
         height: 24px;
-        padding: 0 12px;
+        padding: 0 8px;
+        margin: 0 8px;
+        text-decoration: none;
+        border-bottom: none;
         &.current {
+            color: #FFF;
+            background-color: @menu-border-color;
+        }
+    }
+    .extend {
+        &.prev {
+            margin-right: 0;
+        }
+        &.next {
+            margin-left: 0;
         }
     }
     .space {
