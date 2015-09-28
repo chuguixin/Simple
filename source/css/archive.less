@@ -1,0 +1,90 @@
+// import variable less
+@import (reference) "./base/variable.less";
+// import base less
+@import (reference) "./base/base.less";
+.archive-main {
+    .page-title {
+        position: relative;
+        margin: 0;
+        padding: 40px 0 0 0;
+        text-indent: 120px;
+        .time-line-bg {
+            .time-line-disc {
+                top: 0;
+                display: none;
+            }
+        }
+    }
+    .main-content {
+        .time-title {
+            position: relative;
+            margin: 0;
+            font-size: 2em;
+            line-height: 1em;
+            padding: .6em 0;
+            .time-title-link {
+                text-decoration: none;
+                &:hover {
+                    &+.time-line-bg {
+                        .time-line-disc {
+                            background-color: @base-link-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+        .article-achive-title {
+            position: relative;
+            font-size: 1.5em;
+            line-height: 1em;
+            padding: .6em 0;
+            margin: 0;
+            .title-link {
+                margin-left: 120px;
+                text-decoration: none;
+                font-weight: normal;
+                .title-date {
+                    font-size: .6em;
+                    padding-right: 8px;
+                    color: lighten(@base-color, 10%);
+                    transition: color .36s ease;
+                }
+                &:hover {
+                    &~.time-line-bg {
+                        .time-line-disc {
+                            background-color: @base-link-hover-color;
+                        }
+                    }
+                    .title-date {
+                        color: @base-link-hover-color;
+                    }
+                }
+            }
+        }
+    }
+    .time-line-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100px;
+        width: 4px;
+        background-color: @menu-border-color;
+        display: table-cell;
+        .time-line-disc {
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 10px;
+            margin: -6px 0 0 -4px;
+            background-color: lighten(@menu-border-color, 8%);
+            transition: background-color .36s ease;
+        }
+    }
+    .is-sticky {
+        .time-title-link {
+            z-index: 100;
+        }
+    }
+}
