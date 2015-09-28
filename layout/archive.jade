@@ -9,7 +9,7 @@ block page-content
       h1.page-title All Archives
         .time-line-bg
           span.time-line-disc
-      .main-content        
+      .main-content     
         each post in site.posts.toArray()
           - var currentYear;
           - post.year = date(post.date, 'YYYY');
@@ -45,8 +45,6 @@ block page-content
               .time-line-bg
                 span.time-line-disc
           h3.article-achive-title
-            .time-line-bg
-              span.time-line-disc
             if post.link
               a.title-link(href=post.link, target='_blank')
                 span.title-date=date(post.date, 'MM-DD')
@@ -57,6 +55,8 @@ block page-content
               a.title-link(href=url_for(path), target='_blank')
                 span.title-date=date(post.date, 'MM-DD')
                 !=post.title
+            .time-line-bg
+              span.time-line-disc
 
     // include includes/pagination
 
