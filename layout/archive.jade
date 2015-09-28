@@ -6,22 +6,21 @@ block page-content
   div.archive-main
     if !is_year()
 
-      h1.page-title Archives
+      h1.page-title All Archives
         .time-line-bg
           span.time-line-disc
       .main-content        
-        each post in page.posts.toArray()
+        each post in site.posts.toArray()
           - var currentYear;
           - post.year = date(post.date, 'YYYY');
           if post.year !== currentYear
             - currentYear = post.year;
             h2.time-title
-              != currentYear
+              a.time-title-link(href=url_for(config.archive_dir + '/' + currentYear))
+                != currentYear
               .time-line-bg
                 span.time-line-disc
           h3.article-achive-title
-            .time-line-bg
-              span.time-line-disc
             if post.link
               a.title-link(href=post.link, target='_blank')
                 span.title-date=date(post.date, 'MM-DD')
@@ -32,8 +31,9 @@ block page-content
               a.title-link(href=url_for(path), target='_blank')
                 span.title-date=date(post.date, 'MM-DD')
                 !=post.title
+            .time-line-bg
+              span.time-line-disc
     else
-      h1.page-title 
       .main-content        
         each post in page.posts.toArray()
           - var currentYear;
@@ -58,4 +58,7 @@ block page-content
                 span.title-date=date(post.date, 'MM-DD')
                 !=post.title
 
-    include includes/pagination
+    // include includes/pagination
+
+block page-dom-ready
+  !=js(['/js/libs/jquery.sticky.js', '/js/archive.js'])
