@@ -6,7 +6,7 @@ language: zh-cmn-Hans
 menu:
   Home: /
   Archives: /blog/archives
-  About: /blog/about
+  About: /about
 
 excerpt: true
 
