@@ -9,8 +9,9 @@ block page-content
       h1.page-title All Archives
         .time-line-bg
           span.time-line-disc
-      .main-content     
-        each post in site.posts.toArray()
+      .main-content
+        - var postArray = site.posts.sort('date', 'desc').toArray()
+        each post in postArray
           - var currentYear;
           - post.year = date(post.date, 'YYYY');
           if post.year !== currentYear
