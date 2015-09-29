@@ -4,7 +4,5 @@
     "description": "simple hexo theme",
     "private": true,
     "dependencies": {
-        "hexo-renderer-jade": "^0.1.0",
-        "hexo-renderer-less": "^0.1.3"
     }
 }
