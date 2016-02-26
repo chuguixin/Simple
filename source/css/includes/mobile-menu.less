@@ -1,0 +1,94 @@
+// import variable less
+@import (reference) "../base/variable.less";
+// import base less
+@import (reference) "../base/base.less";
+.mobile-menu-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(242, 242, 242, .95);
+    overflow: hidden;
+    .toggle-menu {
+        position: absolute;
+        bottom: 12px;
+        right: 20px;
+        width: 25px;
+        height: 20px;
+        opacity: .5;
+        cursor: pointer;
+        .menu-bar {
+            background: #505050;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            transition: all .2s ease-in;
+            transform-origin: 0;
+            border-radius: 2px;
+            &:first-child {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 9px;
+            }
+            &:last-child {
+                top: 18px;
+            }
+        }
+    }
+    &.open {
+        .toggle-menu {
+            .menu-bar {
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+            .menu-content {
+                top: 0;
+            }
+        }
+    }
+    .menu-layout-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .menu-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    .menu-list {
+        .clearfix;
+        margin: 0;
+        padding: 0;
+        .menu-item {
+            list-style: none;
+            padding: 0 12px;
+            margin: 14px 0 10px;
+            height: 24px;
+        }
+        .menu-link {
+            display: inline-block;
+            height: 24px;
+            line-height: 24px;
+            text-decoration: none;
+            color: @menu-link-color;
+            font-size: 24px;
+            &:hover {
+                color: @menu-link-color-hover;
+            }
+        }
+    }
+}

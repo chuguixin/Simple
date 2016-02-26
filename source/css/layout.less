@@ -10,7 +10,7 @@
 body {
     font-family: arial, sans-serif;
     background-color: @base-background-color;
-    line-height: 1.5em;
+    line-height: 1.5rem;
     font-size: @base-font-size;
     color: @base-color;
     a {
@@ -37,15 +37,48 @@ body {
     border-bottom: 1px solid @menu-border-color;
     box-shadow: 0 0 3px @menu-border-color;
     z-index: 1;
+    display: none;
     // import menu css
     @import (less) "./includes/menu.less";
+}
+@media (min-width:@normal-media-width) {
+    .base-menu {
+        display: block;
+    }
+}
+
+.base-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    border-bottom: 1px solid @menu-border-color;
+    box-shadow: 0 0 3px @menu-border-color;
+    z-index: 1;
+    display: none;
+    transition: height .2s ease-in;
+    @import (less) "./includes/mobile-menu.less";
+}
+@media (max-width:@mobile-media-width) {
+    .base-mobile-menu {
+        display: block;
+    }
 }
 
 .base-content {
     padding-top: 48px;
     .base-content-main {
-        width: 51em;
+        width: 51rem;
         margin: 0 auto;
+    }
+}
+@media (max-width:@mobile-media-width) {
+    .base-content {
+        .base-content-main {
+            width: auto;
+            padding: 0 2rem;
+        }
     }
 }
 
