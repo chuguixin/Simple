@@ -7,7 +7,7 @@
         position: relative;
         margin: 0;
         padding: 40px 0 0 0;
-        text-indent: 120px;
+        text-indent: 100px;
         .time-line-bg {
             .time-line-disc {
                 top: 0;
@@ -39,24 +39,23 @@
             line-height: 1rem;
             padding: .6em 0;
             margin: 0;
+            .clearfix;
+            .title-date {
+                font-size: .6rem;
+                position: absolute;
+                left: 3rem;
+                width: 8rem;
+            }
             .title-link {
-                margin-left: 120px;
                 text-decoration: none;
                 font-weight: normal;
-                .title-date {
-                    font-size: .6rem;
-                    padding-right: 8px;
-                    color: lighten(@base-color, 10%);
-                    transition: color .36s ease;
-                }
+                float: left;
+                margin-left: 110px;
                 &:hover {
                     &~.time-line-bg {
                         .time-line-disc {
                             background-color: @base-link-hover-color;
                         }
-                    }
-                    .title-date {
-                        color: @base-link-hover-color;
                     }
                 }
             }
@@ -66,7 +65,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 100px;
+        left: 90px;
         width: 4px;
         background-color: @menu-border-color;
         display: table-cell;

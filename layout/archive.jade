@@ -22,15 +22,14 @@ block page-content
               .time-line-bg
                 span.time-line-disc
           h3.article-achive-title
+            span.title-date=date(post.date, 'MM-DD')
             if post.link
               a.title-link(href=post.link, target='_blank')
-                span.title-date=date(post.date, 'MM-DD')
                 !=post.title
             else
               - var rulRegex = /(\/index\.html?$)|(\/?$)/;
               - var path = post.path.replace(rulRegex, '');
               a.title-link(href=url_for(path), target='_blank')
-                span.title-date=date(post.date, 'MM-DD')
                 !=post.title
             .time-line-bg
               span.time-line-disc
@@ -46,15 +45,14 @@ block page-content
               .time-line-bg
                 span.time-line-disc
           h3.article-achive-title
+            span.title-date=date(post.date, 'MM-DD')
             if post.link
               a.title-link(href=post.link, target='_blank')
-                span.title-date=date(post.date, 'MM-DD')
                 !=post.title
             else
               - var rulRegex = /(\/index\.html?$)|(\/?$)/;
               - var path = post.path.replace(rulRegex, '');
               a.title-link(href=url_for(path), target='_blank')
-                span.title-date=date(post.date, 'MM-DD')
                 !=post.title
             .time-line-bg
               span.time-line-disc
