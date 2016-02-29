@@ -1,15 +1,17 @@
 extends layout/layout
 
 block page-content
-  #category
-    h1= page.category
-    - page.posts.each(function(article){
-      .category-item
-        if article.link
-          a(href=url_for(article.link) target="_blank")
-            = article.title || 'No Title'
-        else
-          a(href=url_for(article.path))= article.title || 'No Title'
-        time(datetime=date_xml(article.date))= date(article.date)
-    - })
+  .category-main#category
+    h1.page-title= page.category
+    .page-content
+      - page.posts.each(function(article){
+        .category-item
+          if article.link
+            a.item-title(href=url_for(article.link) target="_blank")
+              = article.title || 'No Title'
+          else
+            a.item-title(href=url_for(article.path))= article.title || 'No Title'
+          
+          span.item-date= date(article.date)
+      - })
   include includes/pagination

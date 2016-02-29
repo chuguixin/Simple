@@ -1,0 +1,35 @@
+// import variable less
+@import (reference) "./base/variable.less";
+// import base less
+@import (reference) "./base/base.less";
+.category-main {
+    padding: 20px 0 40px;
+    .page-title {
+        position: relative;
+        margin: 0;
+        padding: 20px 0;
+        font-size: 36px;
+        margin-bottom: 12px;
+        .time-line-bg {
+            .time-line-disc {
+                top: 0;
+                display: none;
+            }
+        }
+    }
+    .page-content {
+        .category-item {
+            .clearfix;
+            font-size: 18px;
+            border-bottom: 1px dotted #888;
+            margin-bottom: 12px;
+            .item-title {
+                float: left;
+                text-decoration: none;
+            }
+            .item-date {
+                float: right;
+            }
+        }
+    }
+}
