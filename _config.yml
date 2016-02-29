@@ -16,8 +16,8 @@ atom: /atom.xml
 # Miscelaneous
 favicon: /img/favicon.png
 
-# 百度统计
+# 百度统计，你可以在根目录的_config.yml中添加baidu_tongji_id
 baidu_tongji_id: 
 
-# uyan 评论系统
+# uyan 评论系统，你可以在根目录的_config.yml中添加uyan_id
 uyan_id: 
