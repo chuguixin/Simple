@@ -2,7 +2,7 @@
 # html lang
 language: zh-cmn-Hans
 
-# main menu navigation
+# main menu navigation，顶部导航栏链接
 menu:
   Home: /
   Archives: /blog/archives
